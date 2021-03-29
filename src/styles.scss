@@ -1,0 +1,97 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  background: #222;
+}
+
+.header {
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #222;
+  color: white;
+  border-radius: 10px;
+  margin: 80px;
+  padding: 20px;
+}
+
+.clock {
+  border-radius: 100%;
+  background: #ffffff;
+  font-family: "Montserrat";
+  border: 5px solid white;
+  box-shadow: inset 2px 3px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.wrap {
+  overflow: hidden;
+  position: relative;
+  width: 350px;
+  height: 350px;
+  border-radius: 100%;
+}
+
+.minute-hand,
+.hour-hand {
+  position: absolute;
+  height: 120px;
+  width: 6px;
+  margin: auto;
+  top: -35%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: black;
+  transform-origin: bottom center;
+  transform: rotate(0deg);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  border-radius: 3px;
+  transition-duration: 3s;
+}
+
+.minute-hand {
+  position: absolute;
+  height: 145px;
+  width: 4px;
+  top: -42.5%;
+  left: 0;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+  background: #ffffff;
+  transform: rotate(90deg);
+  transition-duration: 3s;
+}
+
+.second-hand {
+  position: absolute;
+  height: 150px;
+  width: 2px;
+  margin: auto;
+  top: -43%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 4px;
+  background: #FF4B3E;
+  transform-origin: bottom center;
+  transform: rotate(180deg);
+  transition-duration: 3s;
+  z-index: 2;
+}
+
+.dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 9px;
+  height: 9px;
+  border-radius: 100px;
+  background: #BE1B1E;
+  border: 2px solid #FF4B3E;
+  border-radius: 100px;
+  margin: auto;
+  z-index: 3;
+}
